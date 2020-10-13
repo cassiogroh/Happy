@@ -1,0 +1,23 @@
+{
+  "name": "happy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd ./packages/mobile && expo-yarn-workspaces postinstall",
+    "build:web": "cd ./packages/web && yarn run react-scripts build",
+    "build": "cd ./packages/server && yarn build",
+    "start": "cd ./packages/web && yarn start"
+},
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "repository": "https://github.com/cassiogroh/Happy.git",
+  "author": "cassiogroh <cassio_groh@hotmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
