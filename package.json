@@ -7,18 +7,22 @@
     "build:web": "cd ./packages/web && yarn build",
     "build": "cd ./packages/server && yarn build",
     "start:web": "cd ./packages/web && yarn start",
-    "start:server": "cd ./packages/web && yarn dev:server",
+    "start:server": "cd ./packages/server && yarn dev",
     "start:mobile": "cd ./packages/mobile && yarn android"
-},
+  },
   "workspaces": {
     "packages": [
       "packages/*"
+    ],
+    "nohoist": [
+      "**/typeorm",
+      "**/typeorm/**"
     ]
   },
   "repository": "https://github.com/cassiogroh/Happy.git",
   "author": "cassiogroh <cassio_groh@hotmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.3"
   }
 }
