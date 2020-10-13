@@ -4,10 +4,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "postinstall": "cd ./packages/mobile && expo-yarn-workspaces postinstall",
-    "build:web": "cd ./packages/web && yarn run react-scripts build",
+    "build:web": "cd ./packages/web && yarn build",
     "build": "cd ./packages/server && yarn build",
-    "start": "cd ./packages/web && yarn start"
+    "start:web": "cd ./packages/web && yarn start",
+    "start:server": "cd ./packages/web && yarn dev:server",
+    "start:mobile": "cd ./packages/mobile && yarn android"
 },
   "workspaces": {
     "packages": [
