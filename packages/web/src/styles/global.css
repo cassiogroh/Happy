@@ -15,8 +15,10 @@ body, input, button, textarea {
 
 button {
   cursor: pointer;
+  outline: none;
 }
 
 a {
+  outline: none;
   text-decoration: none;
 }

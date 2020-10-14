@@ -39,7 +39,8 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends
+      open_on_weekends,
+      whatsapp
     } = request.body;
   
     const images = requestImages.map(image => {
@@ -53,8 +54,9 @@ export default {
       about,
       instructions,
       opening_hours,
-      open_on_weekends,
-      images
+      open_on_weekends: open_on_weekends === 'true',
+      images,
+      whatsapp
     };
 
     const schema = Yup.object().shape({
@@ -69,6 +71,7 @@ export default {
         Yup.object().shape({
           path: Yup.string().required()
       })),
+      whatsapp: Yup.string().required()
     });
 
     await schema.validate(data, {

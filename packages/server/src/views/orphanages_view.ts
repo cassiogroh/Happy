@@ -12,7 +12,8 @@ export default {
       instructions: orphanage.instructions,
       opening_hours: orphanage.opening_hours,
       open_on_weekends: orphanage.open_on_weekends,
-      images: images_view.renderMany(orphanage.images)
+      images: images_view.renderMany(orphanage.images),
+      whatsapp: orphanage.whatsapp
     };
   },
 
