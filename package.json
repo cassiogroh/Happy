@@ -5,10 +5,11 @@
   "private": true,
   "scripts": {
     "build:web": "cd ./packages/web && yarn build",
-    "build": "cd ./packages/server && yarn build",
     "start:web": "cd ./packages/web && yarn start",
-    "start": "cd ./packages/server && yarn dev",
-    "start:mobile": "cd ./packages/mobile && yarn android"
+    "start:server": "cd ./packages/server && yarn dev",
+    "start:mobile": "cd ./packages/mobile && yarn android",
+    "build": "cd ./packages/server && yarn build",
+    "start": "node ./packages/server/dist/server.js"
   },
   "workspaces": {
     "packages": [
