@@ -10,7 +10,8 @@ import errorHandler from './errors/handler';
 const app = express();
 
 app.use(cors({
-  origin: `${process.env.WEB_URL}`
+  origin: `${process.env.WEB_URL}`,
+  optionsSuccessStatus: 200
 }));
 app.use(express.json());
 app.use(routes);
