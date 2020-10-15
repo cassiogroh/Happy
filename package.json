@@ -4,6 +4,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "postinstall": "yarn expo-yarn-workspaces postinstall",
     "build:web": "cd ./packages/web && yarn build",
     "start:web": "cd ./packages/web && yarn start",
     "start:server": "cd ./packages/server && yarn dev",
@@ -12,6 +13,7 @@
     "start": "node ./packages/server/dist/server.js"
   },
   "workspaces": {
+    "private": true,
     "packages": [
       "packages/*"
     ],
