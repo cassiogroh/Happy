@@ -8,7 +8,7 @@
 }
 
 .orphanage-details {
-  width: 700px;
+  max-width: 700px;
   margin: 64px auto;
 
   background: #FFFFFF;
@@ -34,6 +34,7 @@
  
 .orphanage-details .images button {
   border: 0;
+  width: 88px;
   height: 88px;
   background: none;
   cursor: pointer;
@@ -173,4 +174,19 @@
 
 .orphanage-details .orphanage-details-content a.contact-button:hover {
   background: #36CF82;
+}
+
+@media (max-width: 950px) {
+  .orphanage-details {
+    margin: 64px 7% 64px 15%;
+  }
+
+  .orphanage-details .images {
+    column-gap: 15px;
+    margin: 16px 25px 0;
+  }
+
+  .orphanage-details .orphanage-details-content {
+    padding: 50px 20px;
+  }
 }

@@ -37,3 +37,9 @@
 .app-sidebar footer button:hover {
   background: #17D6EB;
 }
+
+@media (max-width: 760px) {
+  .app-sidebar {
+    padding: 32px 5px;
+  }
+}

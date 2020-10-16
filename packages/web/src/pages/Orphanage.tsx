@@ -52,7 +52,6 @@ export default function Orphanage() {
 
       <main>
         <div className="orphanage-details">
-          {console.log(orphanage)}
           <img src={orphanage.images[activeImageIndex].url} alt={orphanage.name} />
 
           <div className="images">

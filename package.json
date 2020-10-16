@@ -11,7 +11,7 @@
     "start:mobile": "cd ./packages/mobile && yarn android",
     "build": "cd ./packages/server && yarn build",
     "start": "node ./packages/server/dist/server.js",
-    "typeorm": "tsnd ./packages/server/node_modules/typeorm/cli.js"
+    "typeorm": "node ./packages/server/node_modules/typeorm/cli.js"
   },
   "workspaces": {
     "private": true,

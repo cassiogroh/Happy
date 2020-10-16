@@ -96,3 +96,48 @@
 #page-map .map-popup .leaflet-popup-tip-container {
   display: none;
 }
+
+@media (max-width: 1300px) {
+  #page-map aside {
+    width: 200px;
+    padding: 20px;
+  }
+
+  #page-map aside h2 {
+    font-size: 15px;
+    line-height: unset;
+    margin-top: 64px;
+  }
+  
+  #page-map aside p {
+    line-height: unset;
+    margin-top: 24px;
+  }
+  
+  #page-map aside footer {
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 750px) {
+  #page-map aside {
+    width: 60px;
+    padding: 5px;
+  }
+
+  #page-map aside img {
+    width: 45px;
+  }
+
+  #page-map aside h2 {
+    display: none;
+  }
+  
+  #page-map aside p {
+    display: none;
+  }
+  
+  #page-map aside footer {
+    line-height: 24px;
+  }
+}

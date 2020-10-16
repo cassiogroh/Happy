@@ -22,3 +22,9 @@ a {
   outline: none;
   text-decoration: none;
 }
+
+@media (max-width: 750px) {
+  body, input, button, textarea {
+    font: 600 12px Nunito, sans-serif;
+  }
+}

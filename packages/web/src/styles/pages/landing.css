@@ -9,9 +9,10 @@
 }
 
 #page-landing .content-wrapper {
+  margin: 0 auto;
   position: relative;
 
-  width: 100%;
+  width: 90%;
   max-width: 1100px;
 
   height: 100%;
@@ -77,4 +78,38 @@
 
 .content-wrapper .enter-app:hover {
   background: #96ffff;
+}
+
+@media (max-width: 750px) {
+  #page-landing .content-wrapper {
+    background-size: 300px;
+  }
+
+  #page-landing .content-wrapper main {
+    max-width: 250px;
+    margin-bottom: 100px;
+  }
+  
+  #page-landing .content-wrapper main h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 50px;
+    background: linear-gradient(329.54deg, #29B6D1aa 0%, #00C7C7aa 50%);
+    border-radius: 20px;
+    padding: 20px;
+  }
+  
+  #page-landing .content-wrapper main p {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .content-wrapper .location {
+    top: 80px;
+  }
+
+  .content-wrapper .enter-app {
+    bottom: 20px;
+  }
 }
