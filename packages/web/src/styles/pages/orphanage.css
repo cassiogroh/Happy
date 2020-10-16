@@ -52,6 +52,7 @@
 .orphanage-details .images button img {
   width: 100%;
   height: 88px;
+  width: 88px;
   object-fit: cover;
   
 }
@@ -188,5 +189,15 @@
 
   .orphanage-details .orphanage-details-content {
     padding: 50px 20px;
+  }
+
+  .orphanage-details .orphanage-details-content .map-container footer {
+    padding: 20px 0;
+  }
+  
+  .orphanage-details .orphanage-details-content .map-container footer a {
+    padding: 20px 100px;
+    line-height: initial;
+
   }
 }

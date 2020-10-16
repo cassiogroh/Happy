@@ -139,5 +139,10 @@
   
   #page-map aside footer {
     line-height: 24px;
+    margin-bottom: 80px;
+  }
+
+  #page-map .create-orphanage {
+    bottom: 80px;
   }
 }

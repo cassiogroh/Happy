@@ -42,4 +42,8 @@
   .app-sidebar {
     padding: 32px 5px;
   }
+
+  .app-sidebar footer {
+    padding-bottom: 80px;
+  }
 }
