@@ -9,12 +9,13 @@ import styles from './styles';
 import mapMarker from '../../images/map-marker.png';
 import { RectButton } from 'react-native-gesture-handler';
 import api from '../../services/api';
+import { or } from 'react-native-reanimated';
 
 interface Orphanage {
   id: number;
   name: string;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
 }
 
 const OrphanagesMap = () => {
@@ -56,8 +57,8 @@ const OrphanagesMap = () => {
                 y: 0.8,
               }}
               coordinate={{
-                latitude: orphanage.latitude,
-                longitude: orphanage.longitude,
+                latitude: Number(orphanage.latitude),
+                longitude: Number(orphanage.longitude),
               }}
             >
               <Callout tooltip onPress={() => handleNavigateToOrphanageDetails(orphanage.id)}>
@@ -73,11 +74,10 @@ const OrphanagesMap = () => {
 
       <View style={styles.footer}>
           <Text style={styles.footerText}>
-            {orphanages.length}
-            {orphanages.length === 0 ? '' :
+            {orphanages.length === 0 ? 'Carregando...' :
             (orphanages.length === 1 ?
-              ' Orfanato encontrado' :
-              ' Orfanatos encontrados'
+              `${orphanages.length} Orfanato encontrado` :
+              `${orphanages.length} Orfanatos encontrados`
             )}
           </Text>
 

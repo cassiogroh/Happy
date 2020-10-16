@@ -41,7 +41,7 @@ export default function OrphanageData() {
     data.append('instructions', instructions);
     data.append('opening_hours', opening_hours);
     data.append('open_on_weekends', String(open_on_weekends));
-    data.append('whatsapp', whatsapp);
+    data.append('whatsapp', String(whatsapp));
     images.forEach((image, index) => data.append('images', {
       name: `image_${index}.jpg`,
       type: 'image/jpg',
@@ -53,7 +53,7 @@ export default function OrphanageData() {
     alert('Cadastro realizado com sucesso!');
 
     navigation.navigate('OrphanagesMap');
-  }, []);
+  }, [position, about, instructions, name, opening_hours, open_on_weekends, images, whatsapp]);
 
   const handleSelectImages = useCallback( async () => {
     const { status } = await ImagePicker.requestCameraRollPermissionsAsync();
@@ -137,11 +137,6 @@ export default function OrphanageData() {
         style={styles.input}
         value={opening_hours}
         onChangeText={setOpeningHours}
-      />
-
-      <Text style={styles.label}>Whatsapp</Text>
-      <TextInput
-        style={styles.input}
       />
 
       <View style={styles.switchContainer}>

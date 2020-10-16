@@ -13,8 +13,8 @@ import api from '../../services/api';
 interface Orphanage {
   id: number;
   name: string;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
   about: string;
   instructions: string;
   opening_hours: string;
@@ -37,7 +37,7 @@ export default function OrphanageDetails() {
   }, [id]);
 
   const handleOpenGoogleMaps = useCallback(() => {
-    Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${orphanage?.latitude},${orphanage?.longitude}`)
+    Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${Number(orphanage?.latitude)},${Number(orphanage?.longitude)}`)
   }, [id]);
 
   const openWhatsapp = useCallback(() => {
@@ -76,8 +76,8 @@ export default function OrphanageDetails() {
         <View style={styles.mapContainer}>
           <MapView 
             initialRegion={{
-              latitude: orphanage.latitude,
-              longitude: orphanage.longitude,
+              latitude: Number(orphanage.latitude),
+              longitude: Number(orphanage.longitude),
               latitudeDelta: 0.008,
               longitudeDelta: 0.008,
             }} 
@@ -90,8 +90,8 @@ export default function OrphanageDetails() {
             <Marker 
               icon={mapMarkerImg}
               coordinate={{ 
-                latitude: orphanage.latitude,
-                longitude: orphanage.longitude
+                latitude: Number(orphanage.latitude),
+                longitude: Number(orphanage.longitude),
               }}
             />
           </MapView>
