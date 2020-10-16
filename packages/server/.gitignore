@@ -1,4 +1,8 @@
 /node_modules
 build/
 dist/
-ormconfig.json
+
+.env
+
+uploads/*
+!uploads/.gitkeep

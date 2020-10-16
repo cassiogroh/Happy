@@ -10,7 +10,8 @@
     "start:server": "cd ./packages/server && yarn dev",
     "start:mobile": "cd ./packages/mobile && yarn android",
     "build": "cd ./packages/server && yarn build",
-    "start": "node ./packages/server/dist/server.js"
+    "start": "node ./packages/server/dist/server.js",
+    "typeorm": "tsnd ./packages/server/node_modules/typeorm/cli.js"
   },
   "workspaces": {
     "private": true,

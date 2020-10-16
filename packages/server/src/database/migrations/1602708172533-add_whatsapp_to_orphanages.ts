@@ -5,7 +5,7 @@ export default class addWhatsappToOrphanages1602708172533 implements MigrationIn
     public async up(queryRunner: QueryRunner): Promise<void> {
       await queryRunner.addColumn('orphanages', new TableColumn({
         name: 'whatsapp',
-        type: 'number',
+        type: 'varchar',
       }));
     }
 
