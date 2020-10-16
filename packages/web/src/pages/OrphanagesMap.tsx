@@ -32,8 +32,17 @@ const OrphanagesMap = () => {
         <header>
           <img src={mapMarkerImg} alt="Happy" />
 
-          <h2>Escolha um orfanato no mapa</h2>
-          <p>Muitas crianças estão esperando a sua visita</p>
+          {
+            orphanages.length === 0 ?
+            <>
+              <h1>Carregando...</h1>
+              <p>Aguarde</p> 
+            </> :
+            <>
+              <h2>Escolha um orfanato no mapa</h2>
+              <p>Muitas crianças estão esperando a sua visita</p>
+            </>
+          }
         </header>
 
         <footer>
